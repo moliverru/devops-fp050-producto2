@@ -7,7 +7,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 class Manejador(BaseHTTPRequestHandler):
     def do_GET(self):
         nombre_pod = socket.gethostname()
-        mensaje = f"Hola desde el pod {nombre_pod}\n"
+        mensaje = f"DevOps FP050 - Respuesta desde el pod {nombre_pod}\n"
 
         self.send_response(200)
         self.send_header("Content-type", "text/plain; charset=utf-8")

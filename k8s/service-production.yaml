@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-fp050-app
+  namespace: production
+spec:
+  type: LoadBalancer
+  selector:
+    app: devops-fp050-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

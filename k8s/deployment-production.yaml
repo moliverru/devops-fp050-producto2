@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-fp050-app
+  namespace: production
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-fp050-app
+  template:
+    metadata:
+      labels:
+        app: devops-fp050-app
+    spec:
+      containers:
+        - name: python-app
+          image: devops-fp050-app:main
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

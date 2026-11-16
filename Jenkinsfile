@@ -42,9 +42,7 @@ pipeline {
                             kubectl -n production get pods
                         '
                 '''
-            }
+         }
         }
     }
-}
-
 }
